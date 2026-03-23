@@ -1,0 +1,52 @@
+exfifteen.html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World CSS 練習</title>
+    <style>
+        body {
+            font-family: serif;
+            padding: 20px;
+        }
+
+        .box {
+            font-size: 32px;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            width: fit-content;
+            min-width: 500px;
+        }
+
+        /* 第一個：雙線邊框 (Double) */
+        .box-1 {
+            background-color: lightblue;
+            border: 5px double tomato; /* 使用 double 關鍵字製作雙線 */
+            color: black;
+        }
+
+        /* 第二個：圓角與藍色邊框 (Rounded) */
+        .box-2 {
+            background-color: yellow;
+            border: 2px solid deepskyblue;
+            border-radius: 15px; /* 製作圓角 */
+            color: black;
+        }
+
+        /* 第三個：虛線/點狀邊框 (Dotted) */
+        .box-3 {
+            background-color: mediumseagreen;
+            border: 5px dotted gray; /* 使用 dotted 製作點點邊框 */
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box box-1">Hello World</div>
+    <div class="box box-2">Hello World</div>
+    <div class="box box-3">Hello World</div>
+
+</body>
+</html>
