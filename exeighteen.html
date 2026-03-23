@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>Heading Style Exercise</title>
+    <style>
+        body {
+            font-family: serif; /* 使用襯線體以符合圖片風格 */
+            padding: 40px;
+        }
+
+        /* 第一個標題：文字陰影效果 */
+        .heading-1 {
+            font-size: 40px;
+            color: black;
+            /* 製作粉紅色陰影效果：x位移 y位移 模糊距離 顏色 */
+            text-shadow: 3px 3px 0px pink;
+            border-top: 3px solid black; /* 上方的橫線 */
+            width: fit-content;
+            margin-bottom: 30px;
+        }
+
+        /* 第二個標題：雙重邊框 (Outline + Border) */
+        .heading-2 {
+            font-size: 30px;
+            font-style: italic; /* 斜體 */
+            padding: 5px 10px;
+            border: 2px solid black;    /* 內層黑線 */
+            outline: 3px solid yellow; /* 外層黃線 */
+            margin-bottom: 40px;
+            /* 讓寬度撐滿或自訂，圖片中看起來是長條狀 */
+        }
+
+        /* 第三個標題：靠右對齊與底線 */
+        .heading-3 {
+            font-size: 24px;
+            text-align: right; /* 靠右對齊 */
+            text-decoration: underline; /* 下劃線 */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="heading-1">This is heading 1</h1>
+
+    <h2 class="heading-2">This is heading 2</h2>
+
+    <h3 class="heading-3">This is heading 3</h3>
+
+</body>
+</html>
