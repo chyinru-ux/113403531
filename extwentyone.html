@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>作業 - CSS Inline-block & Float</title>
+    <style>
+        /* 外層容器 */
+        .container {
+            width: 700px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            line-height: 1.6;
+            margin: 20px auto;
+        }
+
+        /* 右側浮動的 div */
+        .right-box {
+            float: right;
+            width: 150px;
+            height: 180px;
+            border: 3px solid #6B8E23; /* 橄欖綠 */
+            margin-left: 15px;
+            padding: 10px;
+            overflow: auto; /* 自動產生捲軸 */
+            background-color: white;
+        }
+
+        /* 行內區塊樣式 (黃底藍框) */
+        .highlight {
+            display: inline-block;
+            background-color: yellow;
+            border: 2px solid blue;
+            padding: 2px 5px;
+            margin: 0 2px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="right-box">
+            A float div with overflow auto. A float div with overflow auto. 
+            這裡多加一些字測試捲軸功能：The quick brown fox jumps over the lazy dog. 
+            The quick brown fox jumps over the lazy dog.
+        </div>
+
+        <p>
+            (Just long sentence.) Let me not to the marriage of true minds Admit impediments. 
+            <span class="highlight">Love</span> is not love Which alters when it alteration finds, 
+            Or bends with the remover to remove: O, no! it is an ever-fix`ed mark, 
+            That looks on tempests and is never shaken; It is the star to every wand'ring bark, 
+            Whose worth's unknown, although his heighth be taken. 
+            <span class="highlight">Love's</span> not Time's fool, though rosy lips and cheeks 
+            Within his bending sickle's compass come; 
+            <span class="highlight">Love</span> alters not with his brief hours and weeks, 
+            But bears it out even to the edge of doom. If this be error and upon me proved, 
+            I never writ, nor no man ever loved.
+        </p>
+    </div>
+
+</body>
+</html>
