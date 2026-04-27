@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Image Styling Practice</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+
+        /* 通用圖片樣式 */
+        .img-box {
+            height: 300px;
+            background-color: #ccc;
+        }
+
+        /* 左圖：圓角 18px，寬度 33%，不變形 */
+        .left-img {
+            width: 33%;
+            border-radius: 18px;
+            /* 關鍵：防止變形 */
+            object-fit: cover; 
+        }
+
+        /* 中圖：圓形 (border-radius: 50%)，尺寸 150x150，不變形 */
+        .center-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* 也可以寫 150px 或 50% 來達到圓形效果 */
+            border: 2px solid #333; /* 圖中標註 border */
+            object-fit: cover;
+        }
+
+        /* 右圖：寬度 33%，但標註顯示 "distortion" (變形) */
+        /* 這表示我們不使用 object-fit，讓它被強制擠壓 */
+        .right-img {
+            width: 33%;
+            /* 不加 object-fit 就會產生變形 */
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://picsum.photos/id/13/800/800" alt="Eiffel Tower" class="img-box left-img">
+
+    <img src="https://picsum.photos/id/103/400/400" alt="Landscape" class="center-img">
+
+    <img src="https://picsum.photos/id/13/800/800" alt="Eiffel Tower distorted" class="img-box right-img">
+</div>
+
+</body>
+</html>
