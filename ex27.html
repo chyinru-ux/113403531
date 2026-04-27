@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Exercise</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: #55acee; /* 藍色背景 */
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        /* 頂部大區塊 (綠色) */
+        .header-block {
+            background-color: #a3d151;
+            height: 120px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        /* 中間區塊容器 */
+        .mid-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-direction: row; /* 預設橫向排列 (圖 b) */
+        }
+
+        .mid-block {
+            background-color: #00bcd4;
+            height: 100px;
+            flex: 1; /* 平分寬度 */
+        }
+
+        /* 底部區塊容器 */
+        .footer-row {
+            display: flex;
+            gap: 10px;
+            flex-direction: row; /* 預設橫向排列 (圖 b) */
+        }
+
+        .footer-block {
+            background-color: #eceff1;
+            height: 60px;
+            flex: 1;
+        }
+
+        /* --- 關鍵：Media Query (圖 a 狀態) --- */
+        @media screen and (max-width: 480px) {
+            .mid-row, .footer-row {
+                flex-direction: column; /* 當寬度小於 480px，改為垂直堆疊 */
+            }
+            
+            .mid-block {
+                height: 50px; /* 手機版高度縮小一點比較美觀 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-block"></div>
+
+    <div class="mid-row">
+        <div class="mid-block"></div>
+        <div class="mid-block"></div>
+        <div class="mid-block"></div>
+    </div>
+
+    <div class="footer-row">
+        <div class="footer-block"></div>
+        <div class="footer-block"></div>
+        <div class="footer-block"></div>
+        <div class="footer-block"></div>
+    </div>
+</div>
+
+</body>
+</html>
