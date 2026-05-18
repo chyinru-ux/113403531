@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object Manipulation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            padding: 40px 20px;
+            color: #333;
+        }
+        .card {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .step {
+            margin-bottom: 20px;
+        }
+        .label {
+            font-weight: bold;
+            color: #34495e;
+            display: block;
+            margin-bottom: 5px;
+        }
+        pre {
+            background-color: #2d3748;
+            color: #f7fafc;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin: 0;
+        }
+        .highlight {
+            color: #e53e3e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>物件屬性操作結果</h2>
+    
+    <div class="step">
+        <span class="label">1. 原始物件的所有屬性 (Properties)：</span>
+        <pre id="all-props"></pre>
+    </div>
+
+    <div class="step">
+        <span class="label">2. 執行刪除動作：</span>
+        <p style="margin: 5px 0;">執行指令: <code class="highlight">delete student.age;</code></p>
+    </div>
+
+    <div class="step">
+        <span class="label">3. 刪除 age 後的完整物件：</span>
+        <pre id="final-object"></pre>
+    </div>
+</div>
+
+<script>
+    // 建立測試用的學生物件 (包含 age 屬性)
+    let student = {
+        name: "張小明",
+        age: 20,
+        major: "資訊工程",
+        grade: "A"
+    };
+
+    // 步驟 1：列出所有的屬性名稱 (使用 Object.keys)
+    let propsList = Object.keys(student).join(", ");
+    document.getElementById("all-props").textContent = propsList;
+
+    // 步驟 2：刪除 age 屬性
+    delete student.age;
+
+    // 步驟 3：印出刪除後的物件 (轉換成漂亮的 JSON 字串呈現)
+    document.getElementById("final-object").textContent = JSON.stringify(student, null, 4);
+</script>
+
+</body>
+</html>
